@@ -32,6 +32,7 @@ SRC_URI += "\
     file://0013-Upgrade-double-conversion-to-v3.0.0.patch \
     file://0014-Fix-qmake-build-with-glibc-2.28.patch \
     file://0015-Check-glibc-version-for-renameat2-statx-on-non-boots.patch \
+    file://0018-Make-qtbase-support-arm32BE-for-armv8-multilib.patch \
 "
 
 

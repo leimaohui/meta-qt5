@@ -1,0 +1,28 @@
+From 80465df5296027ec9cf7f4b63c412d3742ec1b93 Mon Sep 17 00:00:00 2001
+From: Lei Maohui <leimaohui@cn.fujitsu.com>
+Date: Wed, 5 Sep 2018 17:36:33 +0900
+Subject: [PATCH] Make qtbase support arm32BE for armv8 multilib.
+
+Upstream-Status: Pending
+
+Signed-off-by: Lei Maohui <leimaohui@cn.fujitsu.com>
+---
+ src/3rdparty/double-conversion/include/double-conversion/utils.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/3rdparty/double-conversion/include/double-conversion/utils.h b/src/3rdparty/double-conversion/include/double-conversion/utils.h
+index ca7646d..95abb22 100644
+--- a/src/3rdparty/double-conversion/include/double-conversion/utils.h
++++ b/src/3rdparty/double-conversion/include/double-conversion/utils.h
+@@ -68,7 +68,7 @@ inline void abort_noreturn() { abort(); }
+ // disabled.)
+ // On Linux,x86 89255e-22 != Div_double(89255.0/1e22)
+ #if defined(_M_X64) || defined(__x86_64__) || \
+-    defined(__ARMEL__) || defined(__avr32__) || _M_ARM_FP || \
++    defined(__arm__) || defined(__avr32__) || _M_ARM_FP || \
+     defined(__hppa__) || defined(__ia64__) || \
+     defined(__mips__) || \
+     defined(__powerpc__) || defined(__ppc__) || defined(__ppc64__) || \
+-- 
+2.7.4
+
